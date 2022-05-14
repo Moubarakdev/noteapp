@@ -24,7 +24,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('email');
             $table->string('telephone');
             $table->string('adresse');
-            $table->foreignId('filiere_id')->constrained()->onDelete('cascade');
+            $table->foreignId('filieres_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

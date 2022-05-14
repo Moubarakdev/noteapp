@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePivotTableFiliereNiveau extends Migration
+class CreatePivotTableFilieresMatieres extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreatePivotTableFiliereNiveau extends Migration
      */
     public function up()
     {
-        Schema::create('filiere_niveau', function (Blueprint $table) {
+        Schema::create('filieres_matieres', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('filiere_id')->constrained()->onDelete('cascade');
-            $table->foreignId('niveau_id')->constrained()->onDelete('cascade');
+            $table->foreignId('filieres_id')->constrained()->onDelete('cascade');
+            $table->foreignId('matieres_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreatePivotTableFiliereNiveau extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('filiere_niveau');
+        Schema::dropIfExists('filieres_matieres');
     }
 }

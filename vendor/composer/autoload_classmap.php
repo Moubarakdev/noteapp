@@ -10,6 +10,8 @@ return array(
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AdminCmsUsers1Controller' => $baseDir . '/app/Http/Controllers/AdminCmsUsers1Controller.php',
     'App\\Http\\Controllers\\AdminCmsUsersController' => $baseDir . '/app/Http/Controllers/AdminCmsUsersController.php',
+    'App\\Http\\Controllers\\AdminFilieresController' => $baseDir . '/app/Http/Controllers/AdminFilieresController.php',
+    'App\\Http\\Controllers\\AdminNiveauxController' => $baseDir . '/app/Http/Controllers/AdminNiveauxController.php',
     'App\\Http\\Controllers\\CBHook' => $baseDir . '/app/Http/Controllers/CBHook.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

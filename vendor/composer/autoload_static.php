@@ -620,6 +620,8 @@ class ComposerStaticInit76d41ea9399b3bf69ca6c54fee82677d
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AdminCmsUsers1Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCmsUsers1Controller.php',
         'App\\Http\\Controllers\\AdminCmsUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminCmsUsersController.php',
+        'App\\Http\\Controllers\\AdminFilieresController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminFilieresController.php',
+        'App\\Http\\Controllers\\AdminNiveauxController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminNiveauxController.php',
         'App\\Http\\Controllers\\CBHook' => __DIR__ . '/../..' . '/app/Http/Controllers/CBHook.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
