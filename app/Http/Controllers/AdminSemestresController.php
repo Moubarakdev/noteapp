@@ -5,68 +5,42 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminEtudiantsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminSemestresController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-
-			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "id";
-			$this->limit = "20";
-			$this->orderby = "id,desc";
-			$this->global_privilege = false;
-			$this->button_table_action = true;
-			$this->button_bulk_action = true;
-			$this->button_action_style = "button_icon";
-			$this->button_add = true;
-			$this->button_edit = true;
-			$this->button_delete = true;
-			$this->button_detail = true;
-			$this->button_show = true;
-			$this->button_filter = true;
-			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "etudiants";
-			# END CONFIGURATION DO NOT REMOVE THIS LINE
+	    	# START CONFIGURATION DO NOT REMOVE THIS LINE
+			$this->table 			   = "semestres";	        
+			$this->title_field         = "id";
+			$this->limit               = 20;
+			$this->orderby             = "id,desc";
+			$this->show_numbering      = FALSE;
+			$this->global_privilege    = FALSE;	        
+			$this->button_table_action = TRUE;   
+			$this->button_action_style = "button_icon";     
+			$this->button_add          = TRUE;
+			$this->button_delete       = TRUE;
+			$this->button_edit         = TRUE;
+			$this->button_detail       = TRUE;
+			$this->button_show         = TRUE;
+			$this->button_filter       = TRUE;        
+			$this->button_export       = FALSE;	        
+			$this->button_import       = FALSE;
+			$this->button_bulk_action  = TRUE;	
+			$this->sidebar_mode		   = "normal"; //normal,mini,collapse,collapse-mini
+			# END CONFIGURATION DO NOT REMOVE THIS LINE						      
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
-			$this->col = [];
-			$this->col[] = ["label"=>"Matricule","name"=>"matricule"];
-			$this->col[] = ["label"=>"Nom","name"=>"nom"];
-			$this->col[] = ["label"=>"Prenom","name"=>"prenom"];
-			$this->col[] = ["label"=>"Sexe","name"=>"sexe"];
-			$this->col[] = ["label"=>"Date Naissance","name"=>"date_naissance"];
-			$this->col[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance"];
-			$this->col[] = ["label"=>"Email","name"=>"email"];
-			$this->col[] = ["label"=>"Filiere Id","name"=>"filiere_id","join"=>"filieres,code_filiere"];
+	        $this->col = [];
+			$this->col[] = array("label"=>"Annee Id","name"=>"annee_id","join"=>"annee,id");
+		$this->col[] = array("label"=>"Numero Semestre","name"=>"numero_semestre" );
+
 			# END COLUMNS DO NOT REMOVE THIS LINE
-
 			# START FORM DO NOT REMOVE THIS LINE
-			$this->form = [];
-			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
-			$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Filiere Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filiere,id'];
-			# END FORM DO NOT REMOVE THIS LINE
+		$this->form = [];
+		$this->form[] = ["label"=>"Annee Id","name"=>"annee_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"annee,id"];
+		$this->form[] = ["label"=>"Numero Semestre","name"=>"numero_semestre","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
 
-			# OLD START FORM
-			//$this->form = [];
-			//$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
-			//$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Filiere Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filiere,id'];
-			# OLD END FORM
+			# END FORM DO NOT REMOVE THIS LINE     
 
 			/* 
 	        | ---------------------------------------------------------------------- 

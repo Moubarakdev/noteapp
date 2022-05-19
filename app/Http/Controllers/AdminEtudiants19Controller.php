@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminNiveauxController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminEtudiants19Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -23,27 +23,49 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "grades";
+			$this->button_import = true;
+			$this->button_export = true;
+			$this->table = "etudiants";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Code Grade","name"=>"code_grade"];
-			$this->col[] = ["label"=>"Libelle Grade","name"=>"libelle_grade"];
+			$this->col[] = ["label"=>"Matricule","name"=>"matricule"];
+			$this->col[] = ["label"=>"Nom","name"=>"nom"];
+			$this->col[] = ["label"=>"Prenom","name"=>"prenom"];
+			$this->col[] = ["label"=>"Sexe","name"=>"sexe"];
+			$this->col[] = ["label"=>"Date Naissance","name"=>"date_naissance"];
+			$this->col[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance"];
+			$this->col[] = ["label"=>"Email","name"=>"email"];
+			$this->col[] = ["label"=>"Filieres Id","name"=>"filieres_id","join"=>"filieres,code_filiere"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Code Grade','name'=>'code_grade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Libelle Grade','name'=>'libelle_grade','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
+			$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'number','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,id'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Code Niveau','name'=>'code_niveau','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Libelle Niveau','name'=>'libelle_niveau','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
+			//$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'number','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,id'];
 			# OLD END FORM
 
 			/* 

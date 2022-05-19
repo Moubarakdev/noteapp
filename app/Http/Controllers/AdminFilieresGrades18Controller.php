@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminFiliereNiveauController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminFilieresGrades18Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,25 +25,25 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "filiere_niveau";
+			$this->table = "filieres_grades";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Filiere Id","name"=>"filiere_id","join"=>"filieres,code_filiere"];
-			$this->col[] = ["label"=>"Niveau Id","name"=>"niveau_id","join"=>"niveaux,code_niveau"];
+			$this->col[] = ["label"=>"Filieres Id","name"=>"filieres_id","join"=>"filieres,code_filiere"];
+			$this->col[] = ["label"=>"Grades Id","name"=>"grades_id","join"=>"grades,code_grade"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Filiere Id','name'=>'id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filiere,id'];
-			$this->form[] = ['label'=>'Niveau Id','name'=>'id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'niveau,id'];
+			$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Filiere Id','name'=>'filiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filiere,id'];
-			//$this->form[] = ['label'=>'Niveau Id','name'=>'niveau_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'niveau,id'];
+			//$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,id'];
+			//$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,id'];
 			# OLD END FORM
 
 			/* 
