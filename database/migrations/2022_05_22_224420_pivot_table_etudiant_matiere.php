@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeEvaluationTable extends Migration
+class PivotTableFiliereMatiere extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTypeEvaluationTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_evaluation', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('type_evaluation');
-            $table->timestamps();
-        });
+        $table->id();
+        $table->foreignId('etudiants_id')->constrained()->onDelete('cascade');
+        $table->foreignId('matieres_id')->constrained()->onDelete('cascade');
+        $table->timestamps();
     }
 
     /**
@@ -27,6 +26,6 @@ class CreateTypeEvaluationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_evaluation');
+        //
     }
 }
