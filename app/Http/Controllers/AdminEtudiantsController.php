@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminEvaluationsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminEtudiantsController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -23,24 +23,48 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "evaluations";
+			$this->button_import = true;
+			$this->button_export = true;
+			$this->table = "etudiants";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Semestres Id","name"=>"semestres_id","join"=>"semestres,id"];
+			$this->col[] = ["label"=>"Matricule","name"=>"matricule"];
+			$this->col[] = ["label"=>"Nom","name"=>"nom"];
+			$this->col[] = ["label"=>"Prenom","name"=>"prenom"];
+			$this->col[] = ["label"=>"Sexe","name"=>"sexe"];
+			$this->col[] = ["label"=>"Date Naissance","name"=>"date_naissance"];
+			$this->col[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance"];
+			$this->col[] = ["label"=>"Email","name"=>"email"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Semestres Id','name'=>'semestres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestres,id'];
+			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
+			$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Filieres Matieres Id','name'=>'filieres_matieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres_matieres,id'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Semestres Id","name"=>"semestres_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"semestres,id"];
+			//$this->form[] = ["label"=>"Matricule","name"=>"matricule","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Nom","name"=>"nom","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Prenom","name"=>"prenom","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Sexe","name"=>"sexe","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Date Naissance","name"=>"date_naissance","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Email","name"=>"email","type"=>"email","required"=>TRUE,"validation"=>"required|min:1|max:255|email|unique:etudiants","placeholder"=>"Please enter a valid email address"];
+			//$this->form[] = ["label"=>"Telephone","name"=>"telephone","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Adresse","name"=>"adresse","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Filieres Matieres Id","name"=>"filieres_matieres_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"filieres_matieres,id"];
 			# OLD END FORM
 
 			/* 

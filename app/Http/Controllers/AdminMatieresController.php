@@ -11,7 +11,7 @@
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
-			$this->limit = "20";
+			$this->limit = "30";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
@@ -23,8 +23,8 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = false;
-			$this->button_export = false;
+			$this->button_import = true;
+			$this->button_export = true;
 			$this->table = "matieres";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
@@ -36,8 +36,8 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Code Matiere','name'=>'code_matiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Libelle Matiere','name'=>'libelle_matiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Code Matiere','name'=>'code_matiere','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Libelle Matiere','name'=>'libelle_matiere','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM

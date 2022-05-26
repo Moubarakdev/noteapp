@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminFilieresGrades18Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminFilieresMatieresController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -23,28 +23,24 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = false;
-			$this->button_export = false;
-			$this->table = "filieres_grades";
+			$this->button_import = true;
+			$this->button_export = true;
+			$this->table = "filieres_matieres";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Filieres Id","name"=>"filieres_id","join"=>"filieres,code_filiere"];
-			$this->col[] = ["label"=>"Grades Id","name"=>"grades_id","join"=>"grades,code_grade"];
+			$this->col[] = ["label"=>"Matieres Id","name"=>"matieres_id","join"=>"matieres,code_matiere"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
-			$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
+			$this->form[] = ['label'=>'Matieres Id','name'=>'matieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'matieres,code_matiere'];
 			# END FORM DO NOT REMOVE THIS LINE
 
-			# OLD START FORM
-			//$this->form = [];
-			//$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,id'];
-			//$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,id'];
-			# OLD END FORM
+		
 
 			/* 
 	        | ---------------------------------------------------------------------- 

@@ -5,42 +5,46 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminSemestresController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminFilieresGradesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-	    	# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->table 			   = "semestres";	        
-			$this->title_field         = "id";
-			$this->limit               = 20;
-			$this->orderby             = "id,desc";
-			$this->show_numbering      = FALSE;
-			$this->global_privilege    = FALSE;	        
-			$this->button_table_action = TRUE;   
-			$this->button_action_style = "button_icon";     
-			$this->button_add          = TRUE;
-			$this->button_delete       = TRUE;
-			$this->button_edit         = TRUE;
-			$this->button_detail       = TRUE;
-			$this->button_show         = TRUE;
-			$this->button_filter       = TRUE;        
-			$this->button_export       = FALSE;	        
-			$this->button_import       = FALSE;
-			$this->button_bulk_action  = TRUE;	
-			$this->sidebar_mode		   = "normal"; //normal,mini,collapse,collapse-mini
-			# END CONFIGURATION DO NOT REMOVE THIS LINE						      
+
+			# START CONFIGURATION DO NOT REMOVE THIS LINE
+			$this->title_field = "id";
+			$this->limit = "20";
+			$this->orderby = "id,desc";
+			$this->global_privilege = false;
+			$this->button_table_action = true;
+			$this->button_bulk_action = true;
+			$this->button_action_style = "button_icon";
+			$this->button_add = true;
+			$this->button_edit = true;
+			$this->button_delete = true;
+			$this->button_detail = true;
+			$this->button_show = true;
+			$this->button_filter = true;
+			$this->button_import = true;
+			$this->button_export = true;
+			$this->table = "filieres_grades";
+			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
-	        $this->col = [];
-			$this->col[] = array("label"=>"Annee Id","name"=>"annee_id","join"=>"annee,id");
-		$this->col[] = array("label"=>"Numero Semestre","name"=>"numero_semestre" );
-
+			$this->col = [];
+			$this->col[] = ["label"=>"Filieres Id","name"=>"filieres_id","join"=>"filieres,code_filiere"];
+			$this->col[] = ["label"=>"Grades Id","name"=>"grades_id","join"=>"grades,code_grade"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
-			# START FORM DO NOT REMOVE THIS LINE
-		$this->form = [];
-		$this->form[] = ["label"=>"Annee Id","name"=>"annee_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"annee,id"];
-		$this->form[] = ["label"=>"Numero Semestre","name"=>"numero_semestre","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
 
-			# END FORM DO NOT REMOVE THIS LINE     
+			# START FORM DO NOT REMOVE THIS LINE
+			$this->form = [];
+			$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
+			# END FORM DO NOT REMOVE THIS LINE
+
+			# OLD START FORM
+			//$this->form = [];
+			//$this->form[] = ['label'=>'Filieres Id','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:2|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Grades Id','name'=>'grades_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			# OLD END FORM
 
 			/* 
 	        | ---------------------------------------------------------------------- 

@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminFilieres15Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminGradesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,25 +25,25 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "filieres";
+			$this->table = "grades";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Code Filiere","name"=>"code_filiere"];
-			$this->col[] = ["label"=>"Libelle Filiere","name"=>"libelle_filiere"];
+			$this->col[] = ["label"=>"Code Grade","name"=>"code_grade"];
+			$this->col[] = ["label"=>"Libelle Grade","name"=>"libelle_grade"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Code Filiere','name'=>'code_filiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Libelle Filiere','name'=>'libelle_filiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Code Grade','name'=>'code_grade','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Libelle Grade','name'=>'libelle_grade','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Code Filiere','name'=>'code_filiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Libelle Filiere','name'=>'libelle_filiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ["label"=>"Code Grade","name"=>"code_grade","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"Libelle Grade","name"=>"libelle_grade","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
