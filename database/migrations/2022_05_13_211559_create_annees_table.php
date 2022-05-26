@@ -17,7 +17,7 @@ class CreateAnneesTable extends Migration
             $table->id();
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->integer('periode');
+            $table->String('periode');
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class CreateTypeEvaluationsTable extends Migration
     {
         Schema::create('type_evaluations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('type_evaluation');
+            $table->String('type_evaluation');
             $table->timestamps();
         });
     }

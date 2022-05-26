@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:4000
--- Generation Time: May 26, 2022 at 02:32 AM
+-- Generation Time: May 26, 2022 at 05:38 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -180,7 +180,10 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/delete/4', 'Delete data Dashboard at Menu Management', '', 2, '2022-05-26 00:13:04', NULL),
 (24, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/11', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>0</td><td></td></tr><tr><td>is_dashboard</td><td>0</td><td>1</td></tr><tr><td>sorting</td><td></td><td></td></tr></tbody></table>', 2, '2022-05-26 00:13:19', NULL),
 (25, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/delete/1', 'Delete data Dashboard at Statistic Builder', '', 2, '2022-05-26 00:14:48', NULL),
-(26, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/edit-save/2', 'Update data Dashboard at Statistic Builder', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Utilisateurs</td><td>Dashboard</td></tr><tr><td>slug</td><td>utilisateurs</td><td></td></tr></tbody></table>', 2, '2022-05-26 00:15:03', NULL);
+(26, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/edit-save/2', 'Update data Dashboard at Statistic Builder', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Utilisateurs</td><td>Dashboard</td></tr><tr><td>slug</td><td>utilisateurs</td><td></td></tr></tbody></table>', 2, '2022-05-26 00:15:03', NULL),
+(27, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-26 00:34:49', NULL),
+(28, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-26 00:37:11', NULL),
+(29, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', ' logout', '', NULL, '2022-05-26 00:37:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -412,7 +415,7 @@ INSERT INTO `cms_settings` (`id`, `name`, `content`, `content_input_type`, `data
 (9, 'smtp_password', 'ba428eb6b2f733', 'text', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Email Setting', 'SMTP Password'),
 (10, 'appname', 'NOTE APP', 'text', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'Application Name'),
 (11, 'default_paper_size', 'Legal', 'text', NULL, 'Paper size, ex : A4, Legal, etc', '2022-03-26 11:16:40', NULL, 'Application Setting', 'Default Paper Print Size'),
-(12, 'logo', 'uploads/2022-04/650d0329bbb50280b1e84bdd7802a3c6.png', 'upload_image', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'Logo'),
+(12, 'logo', 'uploads/2022-05/27e1ee0b0e4c2a33a8a049909f110955.png', 'upload_image', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'Logo'),
 (13, 'favicon', 'uploads/2022-05/9aaaeb6fcd741d8bcc4ca691605b38e3.png', 'upload_image', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'Favicon'),
 (14, 'api_debug_mode', 'true', 'select', 'true,false', NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'API Debug Mode'),
 (15, 'google_api_key', NULL, 'text', NULL, NULL, '2022-03-26 11:16:40', NULL, 'Application Setting', 'Google API Key'),
@@ -543,6 +546,7 @@ CREATE TABLE `evaluations_matieres` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `evaluations_id` bigint(20) UNSIGNED NOT NULL,
   `matieres_id` bigint(20) UNSIGNED NOT NULL,
+  `valider` tinyint(1) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1088,7 +1092,7 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`

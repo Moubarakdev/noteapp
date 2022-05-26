@@ -16,6 +16,7 @@ class PivotTableFiliereMatiere extends Migration
         $table->id();
         $table->foreignId('etudiants_id')->constrained()->onDelete('cascade');
         $table->foreignId('matieres_id')->constrained()->onDelete('cascade');
+        $table->boolean("valider")->default(false);
         $table->timestamps();
     }
 
