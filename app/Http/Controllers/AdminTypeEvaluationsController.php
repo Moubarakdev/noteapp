@@ -8,25 +8,24 @@
 	class AdminTypeEvaluationsController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-	    	# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->table 			   = "type_evaluations";	        
-			$this->title_field         = "id";
-			$this->limit               = 20;
-			$this->orderby             = "id,desc";
-			$this->show_numbering      = FALSE;
-			$this->global_privilege    = FALSE;	        
-			$this->button_table_action = TRUE;   
-			$this->button_action_style = "button_icon";     
-			$this->button_add          = TRUE;
-			$this->button_delete       = TRUE;
-			$this->button_edit         = TRUE;
-			$this->button_detail       = TRUE;
-			$this->button_show         = TRUE;
-			$this->button_filter       = TRUE;        
-			$this->button_export       = FALSE;	        
-			$this->button_import       = FALSE;
-			$this->button_bulk_action  = TRUE;	
-			$this->sidebar_mode		   = "normal"; //normal,mini,collapse,collapse-mini
+
+			# START CONFIGURATION DO NOT REMOVE THIS LINE
+			$this->title_field = "id";
+			$this->limit = "20";
+			$this->orderby = "id,desc";
+			$this->global_privilege = false;
+			$this->button_table_action = true;
+			$this->button_bulk_action = true;
+			$this->button_action_style = "button_icon";
+			$this->button_add = true;
+			$this->button_edit = true;
+			$this->button_delete = true;
+			$this->button_detail = true;
+			$this->button_show = true;
+			$this->button_filter = true;
+			$this->button_import = false;
+			$this->button_export = false;
+			$this->table = "type_evaluations";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE

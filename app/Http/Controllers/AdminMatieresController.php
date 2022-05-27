@@ -8,24 +8,25 @@
 	class AdminMatieresController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-
-			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "id";
-			$this->limit = "30";
-			$this->orderby = "id,desc";
-			$this->global_privilege = false;
-			$this->button_table_action = true;
-			$this->button_bulk_action = true;
-			$this->button_action_style = "button_icon";
-			$this->button_add = true;
-			$this->button_edit = true;
-			$this->button_delete = true;
-			$this->button_detail = true;
-			$this->button_show = true;
-			$this->button_filter = true;
-			$this->button_import = true;
-			$this->button_export = true;
-			$this->table = "matieres";
+	    	# START CONFIGURATION DO NOT REMOVE THIS LINE
+			$this->table 			   = "matieres";	        
+			$this->title_field         = "id";
+			$this->limit               = 20;
+			$this->orderby             = "id,desc";
+			$this->show_numbering      = FALSE;
+			$this->global_privilege    = FALSE;	        
+			$this->button_table_action = TRUE;   
+			$this->button_action_style = "button_icon";     
+			$this->button_add          = TRUE;
+			$this->button_delete       = TRUE;
+			$this->button_edit         = TRUE;
+			$this->button_detail       = TRUE;
+			$this->button_show         = TRUE;
+			$this->button_filter       = TRUE;        
+			$this->button_export       = FALSE;	        
+			$this->button_import       = FALSE;
+			$this->button_bulk_action  = TRUE;	
+			$this->sidebar_mode		   = "normal"; //normal,mini,collapse,collapse-mini
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
@@ -36,8 +37,8 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Code Matiere','name'=>'code_matiere','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Libelle Matiere','name'=>'libelle_matiere','type'=>'text','validation'=>'required|min:1|max:50','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Code Matiere','name'=>'code_matiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Libelle Matiere','name'=>'libelle_matiere','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM

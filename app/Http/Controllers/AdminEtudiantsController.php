@@ -37,6 +37,10 @@
 			$this->col[] = ["label"=>"Date Naissance","name"=>"date_naissance"];
 			$this->col[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance"];
 			$this->col[] = ["label"=>"Email","name"=>"email"];
+			$this->col[] = ["label"=>"Telephone","name"=>"telephone"];
+			$this->col[] = ["label"=>"Adresse","name"=>"adresse"];
+			$this->col[] = ["label"=>"Filiere","name"=>"filiere_id","join"=>"filieres,code_filiere"];
+			$this->col[] = ["label"=>"Grade","name"=>"grade_id","join"=>"grades,code_grade"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
@@ -50,7 +54,8 @@
 			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
 			$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Filieres Matieres Id','name'=>'filieres_matieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres_matieres,id'];
+			$this->form[] = ['label'=>'Filiere','name'=>'filiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			$this->form[] = ['label'=>'Grade','name'=>'grade_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -64,7 +69,8 @@
 			//$this->form[] = ["label"=>"Email","name"=>"email","type"=>"email","required"=>TRUE,"validation"=>"required|min:1|max:255|email|unique:etudiants","placeholder"=>"Please enter a valid email address"];
 			//$this->form[] = ["label"=>"Telephone","name"=>"telephone","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			//$this->form[] = ["label"=>"Adresse","name"=>"adresse","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Filieres Matieres Id","name"=>"filieres_matieres_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"filieres_matieres,id"];
+			//$this->form[] = ["label"=>"Filiere Id","name"=>"filiere_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"filiere,id"];
+			//$this->form[] = ["label"=>"Grade Id","name"=>"grade_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"grade,id"];
 			# OLD END FORM
 
 			/* 

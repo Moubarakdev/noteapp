@@ -23,8 +23,8 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = true;
-			$this->button_export = true;
+			$this->button_import = false;
+			$this->button_export = false;
 			$this->table = "annees";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
@@ -39,14 +39,14 @@
 			$this->form = [];
 			$this->form[] = ['label'=>'Date Debut','name'=>'date_debut','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Date Fin','name'=>'date_fin','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Periode','name'=>'periode','type'=>'text','validation'=>'required|min:1|string','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Periode','name'=>'periode','type'=>'text','validation'=>'required|string|min:5','width'=>'col-sm-10','help'=>'date_debut / date_fin','placeholder'=>'date_debut / date_fin'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'Date Debut','name'=>'date_debut','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Date Fin','name'=>'date_fin','type'=>'date','validation'=>'required|date','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Periode','name'=>'periode','type'=>'text','validation'=>'required|min:1|string','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Periode','name'=>'periode','type'=>'text','validation'=>'required|string|min:5','width'=>'col-sm-10','help'=>'date_debut / date_fin','placeholder'=>'date_debut / date_fin'];
 			# OLD END FORM
 
 			/* 
