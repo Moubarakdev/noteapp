@@ -45,11 +45,11 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|unique:etudiants|numeric','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
 			$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
@@ -60,17 +60,17 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Matricule","name"=>"matricule","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Nom","name"=>"nom","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Prenom","name"=>"prenom","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Sexe","name"=>"sexe","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Date Naissance","name"=>"date_naissance","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Lieu Naissance","name"=>"lieu_naissance","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Email","name"=>"email","type"=>"email","required"=>TRUE,"validation"=>"required|min:1|max:255|email|unique:etudiants","placeholder"=>"Please enter a valid email address"];
-			//$this->form[] = ["label"=>"Telephone","name"=>"telephone","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Adresse","name"=>"adresse","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Filiere Id","name"=>"filiere_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"filiere,id"];
-			//$this->form[] = ["label"=>"Grade Id","name"=>"grade_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"grade,id"];
+			//$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|unique:etudiants|numeric','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
+			//$this->form[] = ['label'=>'Telephone','name'=>'telephone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Adresse','name'=>'adresse','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Filiere','name'=>'filiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			//$this->form[] = ['label'=>'Grade','name'=>'grade_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
 			# OLD END FORM
 
 			/* 

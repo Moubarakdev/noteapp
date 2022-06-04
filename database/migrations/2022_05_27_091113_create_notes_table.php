@@ -16,8 +16,13 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('etudiant_id')->constrained()->onDelete('cascade');
-            $table->foreignId('evaluation_id')->constrained()->onDelete('cascade');
-            $table->float('note');
+            $table->foreignId('semestre_id')->constrained()->onDelete('cascade');
+            $table->foreignId('matiere_id')->constrained()->onDelete('cascade');
+            $table->float('note_devoir');
+            $table->float('note_examen');
+            $table->float('note_rattrapage')->nullable();
+            $table->boolean('validation')->default(false);
+            $table->string('commentaires')->nullable();
             $table->timestamps();
         });
     }

@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: May 27, 2022 at 11:27 AM
+-- Host: localhost:4000:4000
+-- Generation Time: Jun 04, 2022 at 02:06 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -35,6 +35,13 @@ CREATE TABLE `annees` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `annees`
+--
+
+INSERT INTO `annees` (`id`, `date_debut`, `date_fin`, `periode`, `created_at`, `updated_at`) VALUES
+(1, '2021-11-02', '2022-07-04', '2021-11-02 /  2022-07-04', '2022-05-27 10:15:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -156,7 +163,99 @@ CREATE TABLE `cms_logs` (
 
 INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `details`, `id_cms_users`, `created_at`, `updated_at`) VALUES
 (1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/add-save', 'Add New Data Dashboard at Menu Management', '', 2, '2022-05-27 09:26:43', NULL),
-(2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>0</td><td></td></tr><tr><td>is_dashboard</td><td>0</td><td>1</td></tr><tr><td>sorting</td><td></td><td></td></tr></tbody></table>', 2, '2022-05-27 09:26:49', NULL);
+(2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>0</td><td></td></tr><tr><td>is_dashboard</td><td>0</td><td>1</td></tr><tr><td>sorting</td><td></td><td></td></tr></tbody></table>', 2, '2022-05-27 09:26:49', NULL),
+(3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/type_evaluations/add-save', 'Add New Data  at Type Evaluation', '', 2, '2022-05-27 09:52:05', NULL),
+(4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/type_evaluations/add-save', 'Add New Data  at Type Evaluation', '', 2, '2022-05-27 09:52:15', NULL),
+(5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/type_evaluations/add-save', 'Add New Data  at Type Evaluation', '', 2, '2022-05-27 09:52:30', NULL),
+(6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 09:59:39', NULL),
+(7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 09:59:45', NULL),
+(8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 09:59:55', NULL),
+(9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 10:00:01', NULL),
+(10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 10:00:10', NULL),
+(11, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres/add-save', 'Add New Data  at Filieres', '', 2, '2022-05-27 10:00:28', NULL),
+(12, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/grades/add-save', 'Add New Data  at Grades', '', 2, '2022-05-27 10:01:12', NULL),
+(13, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/grades/add-save', 'Add New Data  at Grades', '', 2, '2022-05-27 10:01:25', NULL),
+(14, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/grades/add-save', 'Add New Data  at Grades', '', 2, '2022-05-27 10:01:33', NULL),
+(15, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/annees/add-save', 'Add New Data  at Années Scolaire', '', 2, '2022-05-27 10:15:05', NULL),
+(16, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/semestres/add-save', 'Add New Data  at Semestres', '', 2, '2022-05-27 10:15:19', NULL),
+(17, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/matieres/add-save', 'Add New Data  at Matieres', '', 2, '2022-05-27 10:15:34', NULL),
+(18, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/evaluations/add-save', 'Add New Data  at Evaluations', '', 2, '2022-05-27 10:16:31', NULL),
+(19, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/etudiants/add-save', 'Add New Data  at Etudiants', '', 2, '2022-05-27 10:16:52', NULL),
+(20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'http://127.0.0.1:8000/admin/notes/add-save', 'Add New Data  at Notes', '', 2, '2022-05-27 10:17:11', NULL),
+(21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/add-save', 'Add New Data Etudiants at Statistic Builder', '', 2, '2022-05-27 13:54:18', NULL),
+(22, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/cms_users/delete-image', 'Delete the image of Bow at Utilisateurs', '', 2, '2022-05-27 14:19:52', NULL),
+(23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/cms_users/edit-save/3', 'Update data Bow at Utilisateurs', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/2/2022-05/telechargement.png</td></tr><tr><td>password</td><td>$2y$10$Ars3uHT6MMgIScUfaq3Nm.Xakl5bmea7xTL7c6tQUOJguHNxXlHsK</td><td>$2y$10$v19Y2O/HxvnkdUsyuGcNFuVVI9ytkQTd2xEVH/8PEeILeT2VXJHa6</td></tr><tr><td>mobile</td><td>452444</td><td>+22890556868</td></tr><tr><td>status</td><td></td><td></td></tr></tbody></table>', 2, '2022-05-27 14:20:45', NULL),
+(24, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/cms_users/delete-image', 'Delete the image of Moubarak KERIM at Utilisateurs', '', 2, '2022-05-27 14:21:19', NULL),
+(25, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/cms_users/edit-save/1', 'Update data Fulbert at Utilisateurs', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Moubarak KERIM</td><td>Fulbert</td></tr><tr><td>photo</td><td></td><td>uploads/2/2022-05/esag_nde_ecole_superieure_dadministration_et_de_gestion_notre_de_dame_de_leglise_2_scaled.jpg</td></tr><tr><td>password</td><td>$2y$10$BmB.2YTRv8iXFj1Gxjirt.FoXu7SZh9h5.G9APyS8o1YdAWrkqTAC</td><td>$2y$10$VaxLvAG25sAwfFPWeP/YbOjqhknp0nRSHPNHu9OH.6YV.0yF9OwHi</td></tr><tr><td>id_cms_privileges</td><td>1</td><td>4</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:22:37', NULL),
+(26, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-27 14:22:43', NULL),
+(27, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'bow@gmail.com login with IP Address 127.0.0.1', '', 3, '2022-05-27 14:22:59', NULL),
+(28, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'bow@gmail.com logout', '', 3, '2022-05-27 14:23:16', NULL),
+(29, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakleroikinda@gmail.com login with IP Address 127.0.0.1', '', 1, '2022-05-27 14:23:46', NULL),
+(30, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakleroikinda@gmail.com logout', '', 1, '2022-05-27 14:24:13', NULL),
+(31, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-05-27 14:24:15', NULL),
+(32, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/11', 'Update data Utilisateurs at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:26:03', NULL),
+(33, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Update data Années Scolaire at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:26:27', NULL),
+(34, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/3', 'Update data Semestres at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:26:37', NULL),
+(35, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/4', 'Update data Filieres at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>5</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:26:46', NULL),
+(36, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/5', 'Update data Grades at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>6</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:26:56', NULL),
+(37, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/6', 'Update data Matieres at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>7</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:27:18', NULL),
+(38, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/7', 'Update data Type Evaluation at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>8</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:27:29', NULL),
+(39, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/8', 'Update data Evaluations at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>9</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:27:44', NULL),
+(40, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/9', 'Update data Etudiants at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>10</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:28:06', NULL),
+(41, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/10', 'Update data Notes at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>11</td><td></td></tr></tbody></table>', 2, '2022-05-27 14:28:16', NULL),
+(42, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-27 14:28:32', NULL),
+(43, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakleroikinda@gmail.com login with IP Address 127.0.0.1', '', 1, '2022-05-27 14:30:41', NULL),
+(44, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/annees', 'Try view the data :name at Années Scolaire', '', 1, '2022-05-27 14:30:46', NULL),
+(45, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/cms_users', 'Try view the data :name at Utilisateurs', '', 1, '2022-05-27 14:30:59', NULL),
+(46, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/annees', 'Try view the data :name at Années Scolaire', '', 1, '2022-05-27 14:31:01', NULL),
+(47, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres', 'Try view the data :name at Filieres', '', 1, '2022-05-27 14:31:03', NULL),
+(48, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/grades', 'Try view the data :name at Grades', '', 1, '2022-05-27 14:31:03', NULL),
+(49, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakleroikinda@gmail.com logout', '', 1, '2022-05-27 14:33:27', NULL),
+(50, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-05-27 14:33:31', NULL),
+(51, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-27 14:36:03', NULL),
+(52, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-05-28 05:43:21', NULL),
+(53, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/11', 'Update data Utilisateurs at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:44:25', NULL),
+(54, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Update data Années Scolaire at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:44:37', NULL),
+(55, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-28 05:45:38', NULL),
+(56, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakleroikinda@gmail.com login with IP Address 127.0.0.1', '', 1, '2022-05-28 05:46:33', NULL),
+(57, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/semestres', 'Try view the data :name at Semestres', '', 1, '2022-05-28 05:46:46', NULL),
+(58, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/filieres', 'Try view the data :name at Filieres', '', 1, '2022-05-28 05:46:49', NULL),
+(59, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/grades', 'Try view the data :name at Grades', '', 1, '2022-05-28 05:46:51', NULL),
+(60, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakleroikinda@gmail.com logout', '', 1, '2022-05-28 05:47:25', NULL),
+(61, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-05-28 05:47:28', NULL),
+(62, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/10', 'Update data Notes at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>11</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:48:15', NULL),
+(63, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/11', 'Update data Utilisateurs at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:48:34', NULL),
+(64, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Update data Années Scolaire at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td>normal</td><td>green</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:48:58', NULL),
+(65, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/3', 'Update data Semestres at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td>normal</td><td>green</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:49:34', NULL),
+(66, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/6', 'Update data Matieres at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>7</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:50:10', NULL),
+(67, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/7', 'Update data Type Evaluation at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>8</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:50:32', NULL),
+(68, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/8', 'Update data Evaluations at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>9</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:50:48', NULL),
+(69, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakkerim@gmail.com logout', '', 2, '2022-05-28 05:53:38', NULL),
+(70, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakleroikinda@gmail.com login with IP Address 127.0.0.1', '', 1, '2022-05-28 05:54:01', NULL),
+(71, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'moubarakleroikinda@gmail.com logout', '', 1, '2022-05-28 05:55:42', NULL),
+(72, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-05-28 05:55:47', NULL),
+(73, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>0</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:57:45', NULL),
+(74, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/edit-save/2', 'Update data Dashboard at Statistic Builder', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>slug</td><td>utilisateurs</td><td></td></tr></tbody></table>', 2, '2022-05-28 05:58:10', NULL),
+(75, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/add-save', 'Add New Data Dashboard at Statistic Builder', '', 2, '2022-05-28 06:51:21', NULL),
+(76, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/edit-save/4', 'Update data Dashboard at Statistic Builder', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>slug</td><td>dashboard</td><td></td></tr></tbody></table>', 2, '2022-05-28 06:56:56', NULL),
+(77, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/add-save', 'Add New Data Dashboard at Menu Management', '', 2, '2022-05-28 06:59:17', NULL),
+(78, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/statistic_builder/edit-save/4', 'Update data Dashboard2 at Statistic Builder', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Dashboard</td><td>Dashboard2</td></tr><tr><td>slug</td><td>dashboard</td><td></td></tr></tbody></table>', 2, '2022-05-28 06:59:41', NULL),
+(79, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>parent_id</td><td>0</td><td></td></tr></tbody></table>', 2, '2022-05-28 07:00:03', NULL),
+(80, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/12', 'Update data Dashboard at Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>path</td><td>statistic_builder/show/utilisateurs</td><td>statistic_builder/show/dashboard</td></tr><tr><td>parent_id</td><td>0</td><td></td></tr><tr><td>sorting</td><td></td><td></td></tr></tbody></table>', 2, '2022-05-28 07:00:17', NULL),
+(81, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36', 'http://127.0.0.1:8000/admin/notes/edit-save/1', 'Update data  at Notes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 2, '2022-05-28 07:26:59', NULL),
+(82, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/module_generator/delete/20', 'Delete data Notes at Module Generator', '', 2, '2022-06-01 12:40:49', NULL),
+(83, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-06-03 20:44:58', NULL),
+(84, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'moubarakkerim@gmail.com login with IP Address 127.0.0.1', '', 2, '2022-06-04 06:06:02', NULL),
+(85, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/add-save', 'Add New Data  at Notes', '', 2, '2022-06-04 09:22:58', NULL),
+(86, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/matieres/add-save', 'Add New Data  at Matieres', '', 2, '2022-06-04 09:23:26', NULL),
+(87, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/module_generator/delete/17', 'Delete data Type Evaluation at Module Generator', '', 2, '2022-06-04 09:24:01', NULL),
+(88, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/module_generator/delete/18', 'Delete data Evaluations at Module Generator', '', 2, '2022-06-04 09:24:25', NULL),
+(89, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/add-save', 'Add New Data  at Notes', '', 2, '2022-06-04 09:29:06', NULL),
+(90, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/delete/2', 'Delete data 2 at Notes', '', 2, '2022-06-04 09:47:36', NULL),
+(91, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/edit-save/1', 'Update data  at Notes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>note_devoir</td><td>12</td><td>1</td></tr></tbody></table>', 2, '2022-06-04 09:49:49', NULL),
+(92, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/edit-save/1', 'Update data  at Notes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>note_examen</td><td>10</td><td>5</td></tr></tbody></table>', 2, '2022-06-04 09:52:47', NULL),
+(93, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/notes22/edit-save/1', 'Update data  at Notes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 2, '2022-06-04 09:54:07', NULL),
+(94, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'http://127.0.0.1:8000/admin/matieres/add-save', 'Add New Data  at Matieres', '', 2, '2022-06-04 11:58:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -185,7 +284,16 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'Dashboard', 'Statistic', 'statistic_builder/show/utilisateurs', 'normal', 'fa fa-dashboard', 0, 1, 1, 1, NULL, '2022-05-27 09:26:42', '2022-05-27 09:26:48');
+(1, 'Dashboard', 'Statistic', 'statistic_builder/show/utilisateurs', 'normal', 'fa fa-dashboard', 0, 1, 1, 1, 1, '2022-05-27 09:26:42', '2022-05-28 07:00:03'),
+(2, 'Années Scolaire', 'Route', 'AdminAnneesControllerGetIndex', 'green', 'fa fa-cog', 0, 1, 0, 1, 5, '2022-05-27 09:28:54', '2022-05-28 05:48:58'),
+(3, 'Semestres', 'Route', 'AdminSemestresControllerGetIndex', 'green', 'fa fa-check', 0, 1, 0, 1, 6, '2022-05-27 09:37:39', '2022-05-28 05:49:33'),
+(4, 'Filieres', 'Route', 'AdminFilieresControllerGetIndex', 'normal', 'fa fa-compress', 0, 1, 0, 1, 7, '2022-05-27 09:40:20', '2022-05-27 14:26:46'),
+(5, 'Grades', 'Route', 'AdminGradesControllerGetIndex', 'normal', 'fa fa-map-marker', 0, 1, 0, 1, 8, '2022-05-27 09:41:19', '2022-05-27 14:26:56'),
+(6, 'Matieres', 'Route', 'AdminMatieresControllerGetIndex', 'normal', 'fa fa-play-circle-o', 0, 1, 0, 1, 9, '2022-05-27 09:42:11', '2022-05-28 05:50:10'),
+(9, 'Etudiants', 'Route', 'AdminEtudiantsControllerGetIndex', 'normal', 'fa fa-users', 0, 1, 0, 1, 3, '2022-05-27 09:56:47', '2022-05-27 14:28:04'),
+(11, 'Utilisateurs', 'Route', 'AdminCmsUsers1ControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 2, '2022-05-27 14:12:05', '2022-05-28 05:48:33'),
+(12, 'Dashboard', 'Statistic', 'statistic_builder/show/dashboard', 'green', 'fa fa-dashboard', 0, 1, 1, 1, NULL, '2022-05-28 06:59:17', '2022-05-28 07:00:16'),
+(13, 'Notes', 'Route', 'AdminNotes221ControllerGetIndex', NULL, 'fa fa-envelope-o', 0, 1, 0, 1, 12, '2022-06-04 09:13:14', NULL);
 
 -- --------------------------------------------------------
 
@@ -204,24 +312,47 @@ CREATE TABLE `cms_menus_privileges` (
 --
 
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
-(1, 3, 1),
-(3, 5, 1),
-(4, 6, 1),
-(5, 7, 1),
-(6, 8, 1),
-(7, 9, 1),
-(8, 10, 1),
-(10, 4, 1),
-(11, 11, 1),
-(12, 12, 1),
 (13, 13, 1),
 (14, 14, 1),
 (15, 15, 1),
 (16, 16, 1),
 (17, 17, 1),
 (18, 18, 1),
-(21, 1, 3),
-(22, 1, 1);
+(45, 4, 3),
+(46, 4, 5),
+(47, 4, 4),
+(48, 4, 1),
+(49, 5, 3),
+(50, 5, 5),
+(51, 5, 4),
+(52, 5, 1),
+(65, 9, 3),
+(66, 9, 5),
+(67, 9, 4),
+(68, 9, 1),
+(75, 10, 3),
+(76, 10, 4),
+(77, 10, 1),
+(78, 11, 3),
+(79, 11, 1),
+(80, 2, 3),
+(81, 2, 1),
+(82, 3, 3),
+(83, 3, 1),
+(84, 6, 3),
+(85, 6, 4),
+(86, 6, 1),
+(87, 7, 3),
+(88, 7, 4),
+(89, 7, 1),
+(90, 8, 3),
+(91, 8, 4),
+(92, 8, 1),
+(99, 1, 3),
+(100, 1, 1),
+(101, 12, 5),
+(102, 12, 4),
+(103, 13, 1);
 
 -- --------------------------------------------------------
 
@@ -258,7 +389,18 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (8, 'Email Templates', 'fa fa-envelope-o', 'email_templates', 'cms_email_templates', 'EmailTemplatesController', 1, 1, '2022-03-26 11:16:40', NULL, NULL),
 (9, 'Statistic Builder', 'fa fa-dashboard', 'statistic_builder', 'cms_statistics', 'StatisticBuilderController', 1, 1, '2022-03-26 11:16:40', NULL, NULL),
 (10, 'API Generator', 'fa fa-cloud-download', 'api_generator', '', 'ApiCustomController', 1, 1, '2022-03-26 11:16:40', NULL, NULL),
-(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2022-03-26 11:16:40', NULL, NULL);
+(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2022-03-26 11:16:40', NULL, NULL),
+(12, 'Années Scolaire', 'fa fa-rmb', 'annees', 'annees', 'AdminAnneesController', 0, 0, '2022-05-27 09:28:54', NULL, NULL),
+(13, 'Semestres', 'fa fa-check', 'semestres', 'semestres', 'AdminSemestresController', 0, 0, '2022-05-27 09:37:39', NULL, NULL),
+(14, 'Filieres', 'fa fa-compress', 'filieres', 'filieres', 'AdminFilieresController', 0, 0, '2022-05-27 09:40:20', NULL, NULL),
+(15, 'Grades', 'fa fa-map-marker', 'grades', 'grades', 'AdminGradesController', 0, 0, '2022-05-27 09:41:19', NULL, NULL),
+(16, 'Matieres', 'fa fa-play-circle-o', 'matieres', 'matieres', 'AdminMatieresController', 0, 0, '2022-05-27 09:42:11', NULL, NULL),
+(17, 'Type Evaluation', 'fa fa-refresh', 'type_evaluations', 'type_evaluations', 'AdminTypeEvaluationsController', 0, 0, '2022-05-27 09:42:53', NULL, '2022-06-04 09:24:01'),
+(18, 'Evaluations', 'fa fa-map-marker', 'evaluations', 'evaluations', 'AdminEvaluationsController', 0, 0, '2022-05-27 09:43:30', NULL, '2022-06-04 09:24:26'),
+(19, 'Etudiants', 'fa fa-users', 'etudiants', 'etudiants', 'AdminEtudiantsController', 0, 0, '2022-05-27 09:56:47', NULL, NULL),
+(20, 'Notes', 'fa fa-sticky-note', 'notes', 'notes', 'AdminNotesController', 0, 0, '2022-05-27 10:03:39', NULL, '2022-06-01 12:40:49'),
+(21, 'Utilisateurs', 'fa fa-glass', 'cms_users', 'cms_users', 'AdminCmsUsers1Controller', 0, 0, '2022-05-27 14:12:04', NULL, NULL),
+(22, 'Notes', 'fa fa-envelope-o', 'notes22', 'notes', 'AdminNotes221Controller', 0, 0, '2022-06-04 09:13:14', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -297,9 +439,9 @@ CREATE TABLE `cms_privileges` (
 
 INSERT INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `created_at`, `updated_at`) VALUES
 (1, 'Super Administrator', 1, 'skin-red', '2022-03-26 11:16:44', NULL),
-(3, 'administration', 0, 'skin-blue-light', NULL, NULL),
-(4, 'evaluation', 0, 'skin-blue-light', NULL, NULL),
-(5, 'econome', 0, 'skin-blue-light', NULL, NULL);
+(3, 'administration', 0, 'skin-green', NULL, NULL),
+(4, 'evaluation', 0, 'skin-yellow', NULL, NULL),
+(5, 'econome', 0, 'skin-purple', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -337,7 +479,6 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (10, 1, 1, 1, 1, 1, 1, 10, '2022-03-26 11:16:46', NULL),
 (11, 1, 0, 1, 0, 1, 1, 11, '2022-03-26 11:16:46', NULL),
 (12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
-(14, 1, 0, 1, 0, 0, 3, 12, NULL, NULL),
 (15, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
 (16, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
 (17, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
@@ -352,7 +493,38 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (26, 1, 1, 1, 1, 1, 1, 24, NULL, NULL),
 (27, 1, 1, 1, 1, 1, 1, 25, NULL, NULL),
 (28, 1, 1, 1, 1, 1, 1, 26, NULL, NULL),
-(29, 1, 1, 1, 1, 1, 1, 27, NULL, NULL);
+(29, 1, 1, 1, 1, 1, 1, 27, NULL, NULL),
+(30, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
+(31, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
+(32, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
+(33, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
+(34, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
+(35, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
+(36, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
+(37, 1, 1, 1, 1, 1, 1, 19, NULL, NULL),
+(38, 1, 1, 1, 1, 1, 1, 20, NULL, NULL),
+(39, 1, 1, 1, 1, 1, 1, 21, NULL, NULL),
+(87, 1, 0, 1, 0, 0, 5, 19, NULL, NULL),
+(88, 1, 0, 1, 0, 0, 5, 14, NULL, NULL),
+(89, 1, 0, 1, 0, 0, 5, 15, NULL, NULL),
+(90, 1, 0, 1, 0, 0, 5, 16, NULL, NULL),
+(91, 1, 1, 1, 0, 0, 4, 19, NULL, NULL),
+(92, 1, 1, 1, 0, 0, 4, 18, NULL, NULL),
+(93, 1, 0, 1, 0, 0, 4, 14, NULL, NULL),
+(94, 1, 0, 1, 0, 0, 4, 15, NULL, NULL),
+(95, 1, 1, 1, 0, 0, 4, 16, NULL, NULL),
+(96, 1, 1, 1, 0, 0, 4, 20, NULL, NULL),
+(97, 1, 0, 1, 0, 0, 3, 12, NULL, NULL),
+(98, 1, 0, 1, 0, 0, 3, 19, NULL, NULL),
+(99, 1, 0, 1, 0, 0, 3, 18, NULL, NULL),
+(100, 1, 0, 1, 0, 0, 3, 14, NULL, NULL),
+(101, 1, 0, 1, 0, 0, 3, 15, NULL, NULL),
+(102, 1, 0, 1, 0, 0, 3, 16, NULL, NULL),
+(103, 1, 0, 1, 0, 0, 3, 20, NULL, NULL),
+(104, 1, 0, 1, 0, 0, 3, 13, NULL, NULL),
+(105, 1, 0, 1, 0, 0, 3, 17, NULL, NULL),
+(106, 1, 0, 1, 0, 0, 3, 21, NULL, NULL),
+(107, 1, 1, 1, 1, 1, 1, 22, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -414,7 +586,9 @@ CREATE TABLE `cms_statistics` (
 --
 
 INSERT INTO `cms_statistics` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(2, 'Dashboard', 'utilisateurs', '2022-05-26 00:05:53', '2022-05-26 00:15:03');
+(2, 'Dashboard', 'utilisateurs', '2022-05-26 00:05:53', '2022-05-28 05:58:10'),
+(3, 'Etudiants', 'etudiants', '2022-05-27 13:54:18', NULL),
+(4, 'Dashboard2', 'dashboard', '2022-05-28 06:51:20', '2022-05-28 06:59:41');
 
 -- --------------------------------------------------------
 
@@ -440,7 +614,17 @@ CREATE TABLE `cms_statistic_components` (
 --
 
 INSERT INTO `cms_statistic_components` (`id`, `id_cms_statistics`, `componentID`, `component_name`, `area_name`, `sorting`, `name`, `config`, `created_at`, `updated_at`) VALUES
-(4, 2, 'b512ee31c02cddae07d9ad4c95baec29', 'smallbox', 'area1', 0, NULL, '{\"name\":\"Utilisateurs\",\"icon\":\"ion-bag\",\"color\":\"bg-green\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/cms_users14\",\"sql\":\"select count(*) from cms_users;\"}', '2022-05-26 00:06:19', NULL);
+(4, 2, 'b512ee31c02cddae07d9ad4c95baec29', 'smallbox', 'area1', 0, NULL, '{\"name\":\"Utilisateurs\",\"icon\":\"ion-ios-people\",\"color\":\"bg-green\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/cms_users\",\"sql\":\"select count(*) from cms_users;\"}', '2022-05-26 00:06:19', NULL),
+(5, 3, 'ed296c66a3c4eccca49c9409482fdedf', 'smallbox', 'area1', 0, 'Untitled', NULL, '2022-05-27 13:54:59', NULL),
+(6, 2, 'a75c5d63d84e2626bdc9ebced7650d53', 'smallbox', 'area2', 0, NULL, '{\"name\":\"Etudiants\",\"icon\":\"ion-ios-people-outline\",\"color\":\"bg-aqua\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/etudiants\",\"sql\":\"select count(*) from etudiants\"}', '2022-05-27 13:55:06', NULL),
+(8, 2, '2f677057c3c3e77143afe805e533d79b', 'table', 'area5', 0, NULL, '{\"name\":\"Etudiants\",\"sql\":\"SELECT Etudiants.matricule, Etudiants.nom, Etudiants.prenom, Filieres.code_filiere,Grades.code_grade \\r\\nFROM Etudiants\\r\\nINNER JOIN Filieres\\r\\nON Etudiants.filiere_id = Fileres.id\\r\\nINNER JOIN Grades\\r\\nON Etudiant.Grades_id = Grades.id\\r\\nORDER BY Etudiants.nom;\"}', '2022-05-28 05:58:19', NULL),
+(9, 2, '689c7f55a28e4cab079ba26836ce4f90', 'table', 'area5', 0, NULL, '{\"name\":\"Etudiants\",\"sql\":\"CREATE VIEW etudiants AS\\r\\nSELECT Etudiants.matricule, Etudiants.nom, Etudiants.prenom, Filieres.code_filiere,Grades.code_grade \\r\\nFROM Etudiants\\r\\nINNER JOIN Filieres\\r\\nON Etudiants.filiere_id = Fileres.id\\r\\nINNER JOIN Grades\\r\\nON Etudiant.Grades_id = Grades.id\\r\\nORDER BY Etudiants.nom;\\r\\nINNER JOIN Grades\\r\\nON Etudiant.Grades_id = Grades.id\\r\\nORDER BY Etudiants.nom;\"}', '2022-05-28 06:03:53', NULL),
+(10, 2, '0007b2d9d065a8fc63a0e7b4a9a47ec7', 'smallbox', 'area3', 0, NULL, '{\"name\":\"Fili\\u00e8res\",\"icon\":\"ion-podium\",\"color\":\"bg-green\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/filieres\",\"sql\":\"select count(*) from filieres;\"}', '2022-05-28 06:10:26', NULL),
+(11, 2, '7fa8fbb8b6d2ef2b8e15099571e5ac9d', 'smallbox', 'area4', 0, NULL, '{\"name\":\"Mati\\u00e8res\",\"icon\":\"ion-ios-list\",\"color\":\"bg-yellow\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/matieres\",\"sql\":\"select count(*) from matieres;\"}', '2022-05-28 06:15:52', NULL),
+(12, 4, 'e1645d8a8f5fb9cefce782b2627be531', 'smallbox', NULL, 0, 'Untitled', NULL, '2022-05-28 06:51:34', NULL),
+(13, 4, 'e16cf91ec06e48162fd4b944dfff0f21', 'smallbox', 'area1', 0, NULL, '{\"name\":\"Etudiants\",\"icon\":\"ion-ios-people-outline\",\"color\":\"bg-green\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/etudiants\",\"sql\":\"select count(*) from etudiants;\"}', '2022-05-28 06:53:47', NULL),
+(14, 4, '9087aff1897085e35fdd19ee0ecfac94', 'smallbox', 'area2', 0, NULL, '{\"name\":\"Mati\\u00e8res\",\"icon\":\"ion-ios-list\",\"color\":\"bg-yellow\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/matieres\",\"sql\":\"select count(*) from matieres;\"}', '2022-05-28 06:53:49', NULL),
+(15, 4, '5d80c36ad33431a0ebc37e3a9009eece', 'smallbox', 'area3', 0, NULL, '{\"name\":\"Fili\\u00e8res\",\"icon\":\"ion-podium\",\"color\":\"bg-aqua\",\"link\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/filieres\",\"sql\":\"select count(*) from filieres;\"}', '2022-05-28 06:56:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -467,9 +651,9 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `mobile`, `profession`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Moubarak KERIM', 'uploads/2/2022-04/photo.jpg', 'moubarakleroikinda@gmail.com', '$2y$10$BmB.2YTRv8iXFj1Gxjirt.FoXu7SZh9h5.G9APyS8o1YdAWrkqTAC', '+22891036560', 'Directeur', 1, '2022-03-26 11:16:40', '2022-04-09 12:34:59', 'Active'),
+(1, 'Fulbert', 'uploads/2/2022-05/esag_nde_ecole_superieure_dadministration_et_de_gestion_notre_de_dame_de_leglise_2_scaled.jpg', 'moubarakleroikinda@gmail.com', '$2y$10$VaxLvAG25sAwfFPWeP/YbOjqhknp0nRSHPNHu9OH.6YV.0yF9OwHi', '+22891036560', 'Directeur', 4, '2022-03-26 11:16:40', '2022-05-27 14:22:37', 'Active'),
 (2, 'Moubarak KERIM', 'uploads/2/2022-05/photo.jpg', 'moubarakkerim@gmail.com', '$2y$10$tQQlhV.KFyrvXDqS4Kz1yuk8pZFYmsWZN7aMYrkQ/Y8iidWE3/1.S', '+2291036560', 'Directeur', 1, '2022-03-26 11:17:50', '2022-05-26 16:02:15', 'active'),
-(3, 'Bow', 'uploads/1/2022-03/photo.jpg', 'bow@gmail.com', '$2y$10$Ars3uHT6MMgIScUfaq3Nm.Xakl5bmea7xTL7c6tQUOJguHNxXlHsK', '452444', 'Directeur', 3, '2022-03-26 12:20:37', '2022-04-09 12:32:29', NULL);
+(3, 'Bow', 'uploads/2/2022-05/telechargement.png', 'bow@gmail.com', '$2y$10$v19Y2O/HxvnkdUsyuGcNFuVVI9ytkQTd2xEVH/8PEeILeT2VXJHa6', '+22890556868', 'Directeur', 3, '2022-03-26 12:20:37', '2022-05-27 14:20:45', NULL);
 
 -- --------------------------------------------------------
 
@@ -494,21 +678,12 @@ CREATE TABLE `etudiants` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `evaluations`
+-- Dumping data for table `etudiants`
 --
 
-CREATE TABLE `evaluations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nom_evaluation` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `semestre_id` bigint(20) UNSIGNED NOT NULL,
-  `type_evaluation_id` bigint(20) UNSIGNED NOT NULL,
-  `matiere_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `etudiants` (`id`, `matricule`, `nom`, `prenom`, `sexe`, `date_naissance`, `lieu_naissance`, `email`, `telephone`, `adresse`, `filiere_id`, `grade_id`, `created_at`, `updated_at`) VALUES
+(1, '5503', 'KERIM', 'Moubarak', 'M', '2001-02-01', 'lome', 'moubarakkerim@gmail.com', '+22891036560', '91036560,djidjole', 1, 3, '2022-05-27 10:16:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -540,6 +715,29 @@ CREATE TABLE `filieres` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `filieres`
+--
+
+INSERT INTO `filieres` (`id`, `code_filiere`, `libelle_filiere`, `created_at`, `updated_at`) VALUES
+(1, 'TIG', 'Technologie Informatique de Gestion', '2022-05-27 09:59:39', NULL),
+(2, 'DDA', 'Droit des Affaires', '2022-05-27 09:59:45', NULL),
+(3, 'CO', 'Communication des Organisations', '2022-05-27 09:59:55', NULL),
+(4, 'GOL', 'Gestion des Operations et de la Logistique', '2022-05-27 10:00:01', NULL),
+(5, 'MGE', 'Management et Gestion des Entreprises', '2022-05-27 10:00:10', NULL),
+(6, 'BFA', 'Banque Finance Assurance', '2022-05-27 10:00:28', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `filiere_grades`
+--
+
+CREATE TABLE `filiere_grades` (
+  `filieres_id` bigint(20) UNSIGNED NOT NULL,
+  `grades_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- --------------------------------------------------------
 
 --
@@ -554,6 +752,15 @@ CREATE TABLE `grades` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `grades`
+--
+
+INSERT INTO `grades` (`id`, `code_grade`, `libelle_grade`, `created_at`, `updated_at`) VALUES
+(1, 'LP1', 'Licence Professionnelle Première Année', '2022-05-27 10:01:12', NULL),
+(2, 'LP2', 'Licence Professionnelle Deuxieme Année', '2022-05-27 10:01:25', NULL),
+(3, 'LP3', 'Licence Professionnelle Troisieme Année', '2022-05-27 10:01:33', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -567,6 +774,15 @@ CREATE TABLE `matieres` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `matieres`
+--
+
+INSERT INTO `matieres` (`id`, `code_matiere`, `libelle_matiere`, `created_at`, `updated_at`) VALUES
+(1, 'FR', 'Français', '2022-05-27 10:15:34', NULL),
+(2, 'ANG', 'Anglais', '2022-06-04 09:23:26', NULL),
+(3, 'PY', 'PYTHON', '2022-06-04 11:58:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -623,7 +839,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (36, '2022_05_13_223340_create_matieres_table', 1),
 (37, '2022_05_13_223916_create_evaluations_table', 1),
 (38, '2022_05_22_223958_create_etudiants_table', 1),
-(39, '2022_05_27_091113_create_notes_table', 1);
+(40, '2022_06_01_124544_create_filiere_grades_table', 2),
+(41, '2022_05_27_091113_create_notes_table', 3);
 
 -- --------------------------------------------------------
 
@@ -634,11 +851,42 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `notes` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `etudiant_id` bigint(20) UNSIGNED NOT NULL,
-  `evaluation_id` bigint(20) UNSIGNED NOT NULL,
-  `note` double NOT NULL,
+  `semestre_id` bigint(20) UNSIGNED NOT NULL,
+  `matiere_id` bigint(20) UNSIGNED NOT NULL,
+  `note_devoir` double(8,2) NOT NULL,
+  `note_examen` double(8,2) NOT NULL,
+  `note_rattrapage` double(8,2) DEFAULT NULL,
+  `validation` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `notes`
+--
+
+INSERT INTO `notes` (`id`, `etudiant_id`, `semestre_id`, `matiere_id`, `note_devoir`, `note_examen`, `note_rattrapage`, `validation`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 1, 5.00, 5.00, 0.00, 0, '2022-06-04 09:22:58', '2022-06-04 09:54:06');
+
+--
+-- Triggers `notes`
+--
+DELIMITER $$
+CREATE TRIGGER `before_insert_note` BEFORE INSERT ON `notes` FOR EACH ROW IF (NEW.note_devoir + New.note_examen)/2 > 10
+ THEN
+ SET NEW.validation = true;
+ END IF
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `before_update_note` BEFORE UPDATE ON `notes` FOR EACH ROW IF (NEW.note_devoir + New.note_examen)/2 > 10
+ THEN
+ SET NEW.validation = true;
+ ELSE
+ SET NEW.validation = false;
+ END IF
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -697,18 +945,12 @@ CREATE TABLE `semestres` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `type_evaluations`
+-- Dumping data for table `semestres`
 --
 
-CREATE TABLE `type_evaluations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `type_evaluation` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `semestres` (`id`, `annees_id`, `numero_semestre`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2022-05-27 10:15:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -830,15 +1072,6 @@ ALTER TABLE `etudiants`
   ADD KEY `etudiants_grade_id_foreign` (`grade_id`);
 
 --
--- Indexes for table `evaluations`
---
-ALTER TABLE `evaluations`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `evaluations_semestre_id_foreign` (`semestre_id`),
-  ADD KEY `evaluations_type_evaluation_id_foreign` (`type_evaluation_id`),
-  ADD KEY `evaluations_matiere_id_foreign` (`matiere_id`);
-
---
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -850,6 +1083,13 @@ ALTER TABLE `failed_jobs`
 --
 ALTER TABLE `filieres`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `filiere_grades`
+--
+ALTER TABLE `filiere_grades`
+  ADD KEY `filiere_grades_filieres_id_foreign` (`filieres_id`),
+  ADD KEY `filiere_grades_grades_id_foreign` (`grades_id`);
 
 --
 -- Indexes for table `grades`
@@ -875,7 +1115,8 @@ ALTER TABLE `migrations`
 ALTER TABLE `notes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `notes_etudiant_id_foreign` (`etudiant_id`),
-  ADD KEY `notes_evaluation_id_foreign` (`evaluation_id`);
+  ADD KEY `notes_semestre_id_foreign` (`semestre_id`),
+  ADD KEY `notes_matiere_id_foreign` (`matiere_id`);
 
 --
 -- Indexes for table `password_resets`
@@ -905,12 +1146,6 @@ ALTER TABLE `semestres`
   ADD KEY `semestres_annees_id_foreign` (`annees_id`);
 
 --
--- Indexes for table `type_evaluations`
---
-ALTER TABLE `type_evaluations`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -925,7 +1160,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `annees`
 --
 ALTER TABLE `annees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cms_dashboard`
@@ -949,25 +1184,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `cms_notifications`
@@ -985,7 +1220,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `cms_settings`
@@ -997,13 +1232,13 @@ ALTER TABLE `cms_settings`
 -- AUTO_INCREMENT for table `cms_statistics`
 --
 ALTER TABLE `cms_statistics`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `cms_statistic_components`
 --
 ALTER TABLE `cms_statistic_components`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `cms_users`
@@ -1015,13 +1250,7 @@ ALTER TABLE `cms_users`
 -- AUTO_INCREMENT for table `etudiants`
 --
 ALTER TABLE `etudiants`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `evaluations`
---
-ALTER TABLE `evaluations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1033,31 +1262,31 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `filieres`
 --
 ALTER TABLE `filieres`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `grades`
 --
 ALTER TABLE `grades`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `matieres`
 --
 ALTER TABLE `matieres`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1075,13 +1304,7 @@ ALTER TABLE `releves`
 -- AUTO_INCREMENT for table `semestres`
 --
 ALTER TABLE `semestres`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `type_evaluations`
---
-ALTER TABLE `type_evaluations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1101,19 +1324,19 @@ ALTER TABLE `etudiants`
   ADD CONSTRAINT `etudiants_grade_id_foreign` FOREIGN KEY (`grade_id`) REFERENCES `grades` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `evaluations`
+-- Constraints for table `filiere_grades`
 --
-ALTER TABLE `evaluations`
-  ADD CONSTRAINT `evaluations_matiere_id_foreign` FOREIGN KEY (`matiere_id`) REFERENCES `matieres` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `evaluations_semestre_id_foreign` FOREIGN KEY (`semestre_id`) REFERENCES `semestres` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `evaluations_type_evaluation_id_foreign` FOREIGN KEY (`type_evaluation_id`) REFERENCES `type_evaluations` (`id`) ON DELETE CASCADE;
+ALTER TABLE `filiere_grades`
+  ADD CONSTRAINT `filiere_grades_filieres_id_foreign` FOREIGN KEY (`filieres_id`) REFERENCES `filieres` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `filiere_grades_grades_id_foreign` FOREIGN KEY (`grades_id`) REFERENCES `grades` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `notes`
 --
 ALTER TABLE `notes`
   ADD CONSTRAINT `notes_etudiant_id_foreign` FOREIGN KEY (`etudiant_id`) REFERENCES `etudiants` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `notes_evaluation_id_foreign` FOREIGN KEY (`evaluation_id`) REFERENCES `evaluations` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `notes_matiere_id_foreign` FOREIGN KEY (`matiere_id`) REFERENCES `matieres` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `notes_semestre_id_foreign` FOREIGN KEY (`semestre_id`) REFERENCES `semestres` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `semestres`

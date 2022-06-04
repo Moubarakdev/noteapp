@@ -1,11 +1,10 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeEvaluationsTable extends Migration
+class CreateFiliereGradesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +13,9 @@ class CreateTypeEvaluationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_evaluations', function (Blueprint $table) {
-            $table->id();
-            $table->String('type_evaluation');
-            $table->timestamps();
+        Schema::create('filiere_grades', function (Blueprint $table) {
+            $table->foreignId('filieres_id')->constrained()->onDelete('cascade');
+            $table->foreignId('grades_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -28,7 +26,6 @@ class CreateTypeEvaluationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_evaluations');
+        Schema::dropIfExists('filiere_grades');
     }
 }
-
