@@ -23,27 +23,33 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = true;
-			$this->button_export = true;
+			$this->button_import = false;
+			$this->button_export = false;
 			$this->table = "evaluations";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Nom Evaluation","name"=>"nom_evaluation"];
-			$this->col[] = ["label"=>"Semestres Id","name"=>"semestres_id","join"=>"semestres,id"];
+			$this->col[] = ["label"=>"Semestre id","name"=>"semestre_id","join"=>"semestres,numero_semestre"];
+			$this->col[] = ["label"=>"Type Evaluation id","name"=>"type_evaluation_id","join"=>"type_evaluations,type_evaluation"];
+			$this->col[] = ["label"=>"Matiere id","name"=>"matiere_id","join"=>"matieres,code_matiere"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Nom Evaluation','name'=>'nom_evaluation','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Semestres Id','name'=>'semestres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestres,numero_semestre'];
+			$this->form[] = ['label'=>'Semestre ','name'=>'semestre_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestres,numero_semestre'];
+			$this->form[] = ['label'=>'Type Evaluation ','name'=>'type_evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'type_evaluations,type_evaluation'];
+			$this->form[] = ['label'=>'Matiere ','name'=>'matiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'matieres,code_matiere'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Nom Evaluation","name"=>"nom_evaluation","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Semestres Id","name"=>"semestres_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"semestres,id"];
+			//$this->form[] = ['label'=>'Nom Evaluation','name'=>'nom_evaluation','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Semestre Id','name'=>'semestre_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestre,id'];
+			//$this->form[] = ['label'=>'Type Evaluation Id','name'=>'type_evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'type_evaluation,id'];
+			//$this->form[] = ['label'=>'Matiere Id','name'=>'matiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'matiere,id'];
 			# OLD END FORM
 
 			/* 

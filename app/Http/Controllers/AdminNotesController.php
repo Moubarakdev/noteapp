@@ -30,19 +30,22 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Type Evaluation Id","name"=>"type_evaluation_id","join"=>"type_evaluations,type_evaluation"];
+			$this->col[] = ["label"=>"Matricule","name"=>"etudiant_id","join"=>"etudiants,matricule"];
+			$this->col[] = ["label"=>"Evaluation","name"=>"evaluation_id","join"=>"evaluations,nom_evaluation"];
 			$this->col[] = ["label"=>"Note","name"=>"note"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Type Evaluation Id','name'=>'type_evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'type_evaluations,type_evaluation'];
+			$this->form[] = ['label'=>'Matricule','name'=>'etudiant_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'etudiants,matricule'];
+			$this->form[] = ['label'=>'Evaluation','name'=>'evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'evaluations,nom_evaluation'];
 			$this->form[] = ['label'=>'Note','name'=>'note','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Type Evaluation Id','name'=>'type_evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'type_evaluation,id'];
+			//$this->form[] = ['label'=>'Matricule','name'=>'etudiant_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'etudiants,matricule'];
+			//$this->form[] = ['label'=>'Evaluation','name'=>'evaluation_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'evaluations,nom_evaluation'];
 			//$this->form[] = ['label'=>'Note','name'=>'note','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# OLD END FORM
 

@@ -23,27 +23,27 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = true;
-			$this->button_export = true;
+			$this->button_import = false;
+			$this->button_export = false;
 			$this->table = "semestres";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Annee Id","name"=>"annees_id","join"=>"annees,periode"];
+			$this->col[] = ["label"=>"Annees Id","name"=>"annees_id","join"=>"annees,periode"];
 			$this->col[] = ["label"=>"Numero Semestre","name"=>"numero_semestre"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Annee Id','name'=>'annees_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'annees,periode'];
+			$this->form[] = ['label'=>'Annee','name'=>'annees_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'annees,periode'];
 			$this->form[] = ['label'=>'Numero Semestre','name'=>'numero_semestre','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Annee Id','name'=>'annee_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'annee,id'];
-			//$this->form[] = ['label'=>'Numero Semestre','name'=>'numero_semestre','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			//$this->form[] = ["label"=>"Annees Id","name"=>"annees_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"annees,id"];
+			//$this->form[] = ["label"=>"Numero Semestre","name"=>"numero_semestre","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
 			# OLD END FORM
 
 			/* 
