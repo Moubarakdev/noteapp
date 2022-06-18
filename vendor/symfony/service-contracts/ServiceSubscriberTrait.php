@@ -36,7 +36,7 @@ trait ServiceSubscriberTrait
             return $services;
         }
 
-        $services = method_exists(get_parent_class(self::class) ?: '', __FUNCTION__) ? parent::getSubscribedServices() : [];
+        $services = \is_callable(['parent', __FUNCTION__]) ? parent::getSubscribedServices() : [];
         $attributeOptIn = false;
 
         if (\PHP_VERSION_ID >= 80000) {
@@ -106,7 +106,7 @@ trait ServiceSubscriberTrait
     {
         $this->container = $container;
 
-        if (method_exists(get_parent_class(self::class) ?: '', __FUNCTION__)) {
+        if (\is_callable(['parent', __FUNCTION__])) {
             return parent::setContainer($container);
         }
 

@@ -25,15 +25,6 @@ use Monolog\Formatter\FormatterInterface;
  */
 class TestCase extends \PHPUnit\Framework\TestCase
 {
-    public function tearDown(): void
-    {
-        parent::tearDown();
-
-        if (isset($this->handler)) {
-            unset($this->handler);
-        }
-    }
-
     /**
      * @param mixed[] $context
      *

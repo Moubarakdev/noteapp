@@ -137,13 +137,6 @@ class MyTest extends TestCase
 
         triggerTheCodeWithDeprecation();
     }
-
-    public function testSomethingDeprecationFixed()
-    {
-        $this->expectNoDeprecationWithIdentifier('https://github.com/doctrine/orm/issue/1234');
-
-        triggerTheCodeWithoutDeprecation();
-    }
 }
 ```
 
