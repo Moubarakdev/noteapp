@@ -45,10 +45,10 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|unique:etudiants|numeric','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'|unique:etudiants|numeric|required','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'radio','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'Masculin;Femin;autre'];
 			$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];
@@ -60,10 +60,10 @@
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'required|min:1|unique:etudiants|numeric','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Matricule','name'=>'matricule','type'=>'text','validation'=>'|unique:etudiants|numeric|required','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Nom','name'=>'nom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Prenom','name'=>'prenom','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'text','validation'=>'required|min:1|max:1','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Sexe','name'=>'sexe','type'=>'radio','validation'=>'required|min:1|max:1','width'=>'col-sm-10','dataenum'=>'Masculin;Femin;autre'];
 			//$this->form[] = ['label'=>'Date Naissance','name'=>'date_naissance','type'=>'date','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Lieu Naissance','name'=>'lieu_naissance','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Email','name'=>'email','type'=>'email','validation'=>'required|min:1|max:255|email|unique:etudiants','width'=>'col-sm-10','placeholder'=>'Please enter a valid email address'];

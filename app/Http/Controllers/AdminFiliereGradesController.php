@@ -5,14 +5,14 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminNotes221Controller extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminFiliereGradesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "id,desc";
+			$this->orderby = ",desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -23,42 +23,27 @@
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
-			$this->button_import = true;
-			$this->button_export = true;
-			$this->table = "notes";
+			$this->button_import = false;
+			$this->button_export = false;
+			$this->table = "filiere_grade";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Matricule","name"=>"etudiant_id","join"=>"etudiants,matricule"];
-			$this->col[] = ["label"=>"Semestre","name"=>"semestre_id","join"=>"semestres,numero_semestre"];
-			$this->col[] = ["label"=>"Matiere","name"=>"matiere_id","join"=>"matieres,code_matiere"];
-			$this->col[] = ["label"=>"Note Devoir","name"=>"note_devoir"];
-			$this->col[] = ["label"=>"Note Examen","name"=>"note_examen"];
-			$this->col[] = ["label"=>"Note Rattrapage","name"=>"note_rattrapage"];
-			$this->col[] = ["label"=>"Validation","name"=>"commentaire"];
+			$this->col[] = ["label"=>"Filiere","name"=>"filieres_id","join"=>"filieres,code_filiere"];
+			$this->col[] = ["label"=>"Grade","name"=>"grades_id","join"=>"grades,code_grade"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Matricule','name'=>'etudiant_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'etudiants,matricule','datatable_format'=>'matricule,\'-\',nom'];
-			$this->form[] = ['label'=>'Semestre','name'=>'semestre_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestres,numero_semestre'];
-			$this->form[] = ['label'=>'Matiere','name'=>'matiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'matieres,code_matiere'];
-			$this->form[] = ['label'=>'Note Devoir','name'=>'note_devoir','type'=>'money','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Note Examen','name'=>'note_examen','type'=>'money','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Note Rattrapage','name'=>'note_rattrapage','type'=>'money','validation'=>'min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Validation','name'=>'validation','type'=>'hidden','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Filiere','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			$this->form[] = ['label'=>'Grade','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Matricule','name'=>'etudiant_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'etudiants,matricule','datatable_format'=>'matricule,\'-\',nom'];
-			//$this->form[] = ['label'=>'Semestre','name'=>'semestre_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'semestres,numero_semestre'];
-			//$this->form[] = ['label'=>'Matiere','name'=>'matiere_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'matieres,code_matiere'];
-			//$this->form[] = ['label'=>'Note Devoir','name'=>'note_devoir','type'=>'money','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Note Examen','name'=>'note_examen','type'=>'money','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Note Rattrapage','name'=>'note_rattrapage','type'=>'money','validation'=>'min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Validation','name'=>'validation','type'=>'hidden','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+			//$this->form[] = ['label'=>'Filiere','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'filieres,code_filiere'];
+			//$this->form[] = ['label'=>'Grade','name'=>'filieres_id','type'=>'select2','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'grades,code_grade'];
 			# OLD END FORM
 
 			/* 
